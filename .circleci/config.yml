@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  smoke:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run: echo smoke test ok
+workflows:
+  main:
+    jobs:
+      - smoke
